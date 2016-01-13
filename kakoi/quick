@@ -1,0 +1,21 @@
+#!/usr/bin/env php -q
+<?php
+/**
+ * Created by PhpStorm.
+ * User: gewenrui
+ * Date: 16/1/11
+ * Time: 上午7:37
+ */
+require_once __DIR__.'/kakoi/Creator/Creator.class.php';
+$obj = new Creator();
+/*传入的参数
+    1,modle      创建MODEL
+    2,controller 创建CONTROLLER
+    3,migrate    同步数据库
+*/
+
+$input  = $_SERVER["argv"][1];
+@$status = $_SERVER["argv"][2];
+$obj->input($input,@$status);
+//echo __DIR__;
+//require_once
